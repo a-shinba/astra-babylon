@@ -1,0 +1,26 @@
+{
+  "name": "orbital-gravity-workshop",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "node --experimental-strip-types --test src/core/*.test.ts",
+    "test:e2e": "playwright test",
+    "benchmark": "npm run build && node scripts/benchmark.mjs"
+  },
+  "dependencies": {
+    "@babylonjs/core": "^8.32.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.0.0",
+    "typescript": "~5.9.2",
+    "vite": "^7.1.5"
+  }
+}
